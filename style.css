@@ -1,0 +1,322 @@
+/*
+Theme Name: Tweet Archive
+Theme URI: #
+Description: Made from Stopdesign's Tweet archive
+Version: 1.0
+Author: Ozh
+Author URI: http://ozh.org/
+Tags: twitter, tweets, archive
+
+*/
+
+body {
+  background:transparent url(img/thisisozh.png) top left no-repeat;
+  margin:0;
+  padding:0;
+  font:15px/22px "Helvetica Neue",Arial,Sans-serif;
+  color:#333;
+}
+
+
+/* !Links
+----------------------------------------------- */
+a {
+  color:#08b;
+  text-decoration:none;
+}
+a:hover {
+  background:#E4F2FD;
+  color:#069;
+  text-decoration:underline;
+}
+a img {
+  border-width:0;
+}
+
+
+
+/* !Structure
+----------------------------------------------- */
+#container {
+  margin:0 auto;
+  padding:15px 0 0 250px;
+  float:left;
+}
+#content {
+  background:transparent;
+  float:left;
+  width:580px;
+  padding:0;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+#sidebar {
+  float:right;
+  width:220px;
+}
+  
+#tweets, #tweet {
+	margin-right:15px;
+}
+  
+@media all and (max-width: 1100px) and (min-width:1024px){
+  #sidebar { width: 220px }
+  #content { width: 520px }
+}
+
+@media all and (max-width: 1023px) {
+  #sidebar { display:none; }
+  #content { width: 580px }
+}
+
+/* !User
+----------------------------------------------- */
+#user {
+  float:left;
+  width:90%;
+  margin:15px 10px 30px;
+  line-height:22px;
+  color:#ccc;
+  background:white;
+  padding:10px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#user .avatar {
+  float:left;
+  width:70px;
+  height:70px;
+  margin:0 10px 0 0;
+}
+#user-info {
+  margin-left:58px;
+}
+#user-fn {
+  margin-right:2px;
+  font-size:18px;
+  color:#333;
+}
+#username {
+  color:#666;
+}
+#user-loc {
+  color:#666;
+}
+
+
+/* !Tweets
+----------------------------------------------- */
+#tweets h2 {
+  margin:0 0 10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #eee;
+  font-size:24px;
+}
+#tweets .post, #tweet .post {
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #eee;
+}
+#tweets .post p, #tweet .post p {
+  margin:0;
+}
+#tweets a {
+  font-weight:bold;
+}
+#tweets .meta a {
+  font-weight:normal;
+}
+#tweets .post .meta, #tweets .post .meta a, #tweet .post .meta, #tweet .post .meta a {
+  font-size:12px;
+  color:#999;
+}
+#tweet .tweet {
+  font-size:24px;
+  line-height:30px;
+}
+#tweet .post .meta, #tweet .post .meta a {
+  font-size:15px;
+  line-height:30px;
+}
+.post:hover .meta a {
+  text-decoration:underline;
+}
+#tweets .post .meta a:hover, #tweet .post .meta a:hover {
+  color:#666;
+}
+
+
+/* !Searchform
+----------------------------------------------- */
+#searchform {
+  margin:0 0 20px;
+  padding:0 0 18px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+#searchform .inner {
+  padding:0 10px;
+}
+#searchform label {
+  display:block;
+  padding:0 0 2px;
+  font-size:13px;
+  line-height:18px;
+  color:#333;
+}
+#searchform .txt {
+  float:left;
+  width:150px;
+  margin:0;
+  padding:2px 5px;
+  border:1px solid #ddd;
+  border-top-color:#ccc;
+  border-right-width:0;
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  border-top-left-radius:5px;
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-bottom-left-radius:5px;
+  border-bottom-left-radius:5px;
+  font:15px/22px "Helvetica Neue",Arial,Sans-serif;
+  color:#333;
+}
+#searchform .btn {
+  background:#6ab url("img/bg-searchbutton.png") no-repeat 55% 100%;
+  width:32px;
+  margin:0;
+  padding:2px 0;
+  border:1px solid #367;
+  border-left-width:0;
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;
+  border-top-right-radius:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-bottom-right-radius:5px;
+  font:15px/22px "Helvetica Neue",Arial,Sans-serif;
+}
+
+
+/* !Nav
+----------------------------------------------- */
+#nav {
+	padding:0 0 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	font-size:13px;
+}
+#nav h2 {
+	margin:0;
+	font-size:13px;
+	padding:1px 4px 1px 10px;
+	margin-top:20px;
+	margin-bottom:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	color:#222;
+	background:#6CB5F4;
+	box-shadow: 2px 2px 3px #aaa;
+	-moz-box-shadow: 2px 2px 3px #aaa;
+	-webkit-box-shadow: 2px 2px 3px #aaa;
+}
+#nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	overflow:hidden;
+	width:100%;
+}
+#nav li {
+	margin:0px;
+	padding:0;
+}
+#nav li a , #nav ul.block li {
+	display:block;
+	padding:1px 4px 1px 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	color:#666;
+	font-size:13px;
+}
+#nav ul.block li a {
+	padding:0;
+}
+#nav .wp-tag-cloud li a, #nav .wp-tag-cloud li {
+	display:inline; float:left; width:auto;
+}
+#nav li a:hover, #nav li.current a, #nav li.current a:hover, #nav ul.block li.current, #nav ul.block li:hover {
+  background:#E4F2FD;
+  text-decoration:none;
+}
+#nav li.current a {
+  font-weight:bold;
+}
+#nav li a:hover {
+  background:#f6f6f6;
+}
+#nav li .count {
+  background:rgba(255,255,255,0.5);
+  float:right;
+  line-height:14px;
+  margin-top:2px;
+  padding:2px 5px;
+  color:#999;
+  font-size:11px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+#nav li.current a {
+  color:#333;
+}
+#nav li.current .count {
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  font-weight:normal;
+}
+
+#archives li {
+	background:transparent url("img/li-bg.png") right center no-repeat;
+}
+
+/* !Misc
+----------------------------------------------- */
+.pagination {
+  float:left;
+  width:100%;
+}
+.pagination .older {
+  float:left;
+  width:45%;
+}
+.pagination .newer {
+  float:right;
+  width:45%;
+  text-align:right;
+}
+.reset {
+  display:block;
+  clear:both;
+  height:1px;
+  font-size:1px;
+  line-height:1px;
+}
+
+
+/* !Footer
+----------------------------------------------- */
+#footer p {
+  padding:10px 0;
+  color:#999;
+  font-size:12px;
+}
+#footer a {
+  color:#666;
+}
