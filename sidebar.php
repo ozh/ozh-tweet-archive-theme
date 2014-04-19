@@ -2,9 +2,9 @@
 
 <?php get_search_form(); ?>
 
-  <div id="nav"><div class="inner">
+  <div id="nav">
   
-    <h2>Archives</h2>
+    <h2><i class="fa fa-calendar"></i> Archives</h2>
 	<?php /**/ ?>
     <ul id='archives'>
       <li<?php if (is_home()) echo ' class="current"'; ?>><a href="<?php bloginfo('url'); ?>/">Home (recent tweets) <span class="count">ALL</span></a></li>
@@ -13,7 +13,7 @@
 	</ul>
 	<?php /**/ ?>
 	
-	<h2>Stats</h2>
+	<h2><i class="fa fa-dashboard"></i> Stats</h2>
 	<?php /**/ ?>
 	<ul id="stats" class="block">
 	<li class="stats">Tweets <span class="count"><?php do_action('ozh_ta_total_tweets'); ?></span></li>
@@ -26,10 +26,10 @@
 	</ul>
 	<?php /**/ ?>
 
-	<h2>Hashtags</h2>
+	<h2><i class="fa fa-tags"></i> #hashtags</h2>
 	<?php wp_tag_cloud('format=list'); ?>
 	
-	<h2>Bleh</h2>
+	<h2><i class="fa fa-info-circle"></i> Bleh</h2>
 	<ul class="block">
 	<li>Tweets archive every <span class="count"><?php global $ozh_ta; echo ozh_ta_seconds_to_words( $ozh_ta['refresh_interval'] ); ?></span></li>
 	<li>Next update in <span class="count"><?php echo ozh_ta_next_update_in(); ?></span></li>
@@ -39,7 +39,7 @@
 
   <?php //endif; // no dynamic sidebar?>
 	
-  </div></div>
+  </div>
 
 </div>
 

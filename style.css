@@ -1,24 +1,22 @@
 /*
 Theme Name: Tweet Archive
 Theme URI: #
-Description: Made from Stopdesign's Tweet archive
-Version: 1.0
+Description: Ozh' Tweet Archive
+Version: 2.0
 Author: Ozh
 Author URI: http://ozh.org/
 Tags: twitter, tweets, archive
-
 */
 
 body {
-  background:transparent url(img/thisisozh.png) top left no-repeat;
+  background:#fff;
   margin:0;
   padding:0;
-  font:15px/22px "Helvetica Neue",Arial,Sans-serif;
+  font:16px/22px "Helvetica Neue",Arial,Sans-serif;
   color:#333;
 }
 
-
-/* !Links
+/* Links
 ----------------------------------------------- */
 a {
   color:#08b;
@@ -31,95 +29,130 @@ a:hover {
 }
 a img {
   border-width:0;
+  background:none;
 }
 
-
-
-/* !Structure
+/* Structure
 ----------------------------------------------- */
-#container {
-  margin:0 auto;
-  padding:15px 0 0 250px;
-  float:left;
+
+#header {
+    background:transparent url(img/1500x500.png) right -100px no-repeat;
+    background-size: 100% auto;
+    width:100%;
+    height:250px;
+    box-shadow:0 0px 2px rgba(0, 0, 0, 0) inset, 0 0px 5px rgba(0, 0, 0, 0.8) inset;
 }
+
+#container {
+  margin:-97px auto 0;
+  padding-top:15px;
+  max-width:1120px;
+}
+
 #content {
   background:transparent;
   float:left;
-  width:580px;
+  width:calc(100% - 245px);
   padding:0;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
   border-radius:5px;
 }
+
 #sidebar {
   float:right;
   width:220px;
 }
   
-#tweets, #tweet {
-	margin-right:15px;
+#tweets {
+  margin-left: 260px;
+  margin-top: 100px;
+}
+
+#footer {
+  margin-left: 260px;
 }
   
 @media all and (max-width: 1100px) and (min-width:1024px){
-  #sidebar { width: 220px }
-  #content { width: 520px }
+  #zsidebar { width: 220px }
+  #zcontent { width: 520px }
 }
 
 @media all and (max-width: 1023px) {
-  #sidebar { display:none; }
-  #content { width: 580px }
+  #zsidebar { display:none; }
+  #zcontent { width: 580px }
 }
 
-/* !User
+/* User
 ----------------------------------------------- */
 #user {
+  width:230px;
+  margin:0px;
   float:left;
-  width:90%;
-  margin:15px 10px 30px;
   line-height:22px;
-  color:#ccc;
-  background:white;
   padding:10px 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
-}
-#user .avatar {
-  float:left;
-  width:70px;
-  height:70px;
-  margin:0 10px 0 0;
-}
-#user-info {
-  margin-left:58px;
-}
-#user-fn {
-  margin-right:2px;
-  font-size:18px;
   color:#333;
 }
-#username {
-  color:#666;
-}
-#user-loc {
-  color:#666;
+
+#user a {
+  padding: 0;
+  background: 0;
+  color:inherit;
 }
 
+#user-pic {
+  overflow:auto;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 1px 1px rgba(136, 153, 166, 0.35);
+}
 
-/* !Tweets
+#user .avatar {
+  width:200px;
+  height:200px;
+  background-image: url(img/new-profile.jpg);
+  background-size: 100% 100%;
+  border-radius:10px;
+  margin:8px;
+  padding:8px;
+  display:block;
+}
+
+#user-info {
+  padding:8px;
+}
+
+#user-info ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#user-info i.fa {
+    color:#aaa;
+    width:20px;
+}
+
+#user-realname {
+  font-size:24px;
+  font-weight:bolder;
+  color:#111;
+  margin-bottom:10px;
+}
+
+/* Tweets
 ----------------------------------------------- */
 #tweets h2 {
   margin:0 0 10px;
   padding-bottom:10px;
-  border-bottom:1px solid #eee;
+  border-bottom:3px solid #D6E685;
   font-size:24px;
 }
-#tweets .post, #tweet .post {
-  margin-bottom:10px;
+#tweets .post {
+  margin:20px 0px;
   padding-bottom:10px;
-  border-bottom:1px solid #eee;
+  border-bottom:1px solid #D6E685;
 }
-#tweets .post p, #tweet .post p {
+#tweets .post p {
   margin:0;
 }
 #tweets a {
@@ -128,45 +161,37 @@ a img {
 #tweets .meta a {
   font-weight:normal;
 }
-#tweets .post .meta, #tweets .post .meta a, #tweet .post .meta, #tweet .post .meta a {
+#tweets .post .meta, #tweets .post .meta a {
   font-size:12px;
   color:#999;
 }
-#tweet .tweet {
-  font-size:24px;
-  line-height:30px;
+body.single #tweets .tweet {
+  font:24px;
+  line-height:26px;
 }
-#tweet .post .meta, #tweet .post .meta a {
+body.single #tweets .post .meta, body.single #tweets .post .meta a {
   font-size:15px;
-  line-height:30px;
+  line-height:26px;
+  padding-top:10px;
 }
 .post:hover .meta a {
   text-decoration:underline;
 }
-#tweets .post .meta a:hover, #tweet .post .meta a:hover {
+#tweets .post .meta a:hover {
   color:#666;
 }
 
 
-/* !Searchform
+/* Searchform
 ----------------------------------------------- */
 #searchform {
-  margin:0 0 20px;
-  padding:0 0 18px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
+  margin:0 0 50px;
+  padding:12px 13px;
   border-radius:5px;
+  background:white;
+  box-shadow:2px 2px 1px rgba(136, 153, 166, 0.85) inset;
 }
-#searchform .inner {
-  padding:0 10px;
-}
-#searchform label {
-  display:block;
-  padding:0 0 2px;
-  font-size:13px;
-  line-height:18px;
-  color:#333;
-}
+
 #searchform .txt {
   float:left;
   width:150px;
@@ -175,38 +200,31 @@ a img {
   border:1px solid #ddd;
   border-top-color:#ccc;
   border-right-width:0;
-  -moz-border-radius-topleft:5px;
-  -webkit-border-top-left-radius:5px;
   border-top-left-radius:5px;
-  -moz-border-radius-bottomleft:5px;
-  -webkit-border-bottom-left-radius:5px;
   border-bottom-left-radius:5px;
   font:15px/22px "Helvetica Neue",Arial,Sans-serif;
   color:#333;
 }
 #searchform .btn {
-  background:#6ab url("img/bg-searchbutton.png") no-repeat 55% 100%;
+  background:#1E6823 url("img/bg-searchbutton.png") no-repeat 55% 100%;
   width:32px;
   margin:0;
   padding:2px 0;
   border:1px solid #367;
   border-left-width:0;
-  -moz-border-radius-topright:5px;
-  -webkit-border-top-right-radius:5px;
   border-top-right-radius:5px;
-  -moz-border-radius-bottomright:5px;
-  -webkit-border-bottom-right-radius:5px;
   border-bottom-right-radius:5px;
   font:15px/22px "Helvetica Neue",Arial,Sans-serif;
 }
 
+#searchform:hover .btn {
+    background-color:#8CC665;
+}
 
-/* !Nav
+/* Nav
 ----------------------------------------------- */
 #nav {
 	padding:0 0 20px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
 	border-radius:5px;
 	font-size:13px;
 }
@@ -216,14 +234,10 @@ a img {
 	padding:1px 4px 1px 10px;
 	margin-top:20px;
 	margin-bottom:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
 	border-radius:5px;
-	color:#222;
-	background:#6CB5F4;
+	color:#fff;
+	background:#1E6823;
 	box-shadow: 2px 2px 3px #aaa;
-	-moz-box-shadow: 2px 2px 3px #aaa;
-	-webkit-box-shadow: 2px 2px 3px #aaa;
 }
 #nav ul {
 	margin:0;
@@ -239,8 +253,6 @@ a img {
 #nav li a , #nav ul.block li {
 	display:block;
 	padding:1px 4px 1px 10px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
 	border-radius:5px;
 	color:#666;
 	font-size:13px;
@@ -250,6 +262,7 @@ a img {
 }
 #nav .wp-tag-cloud li a, #nav .wp-tag-cloud li {
 	display:inline; float:left; width:auto;
+    padding:0px 3px;
 }
 #nav li a:hover, #nav li.current a, #nav li.current a:hover, #nav ul.block li.current, #nav ul.block li:hover {
   background:#E4F2FD;
@@ -259,7 +272,7 @@ a img {
   font-weight:bold;
 }
 #nav li a:hover {
-  background:#f6f6f6;
+  background:#D6E685;
 }
 #nav li .count {
   background:rgba(255,255,255,0.5);
@@ -269,8 +282,6 @@ a img {
   padding:2px 5px;
   color:#999;
   font-size:11px;
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
   border-radius:3px;
 }
 #nav li.current a {
@@ -286,11 +297,13 @@ a img {
 	background:transparent url("img/li-bg.png") right center no-repeat;
 }
 
-/* !Misc
+/* Misc
 ----------------------------------------------- */
 .pagination {
-  float:left;
-  width:100%;
+  margin-top:30px;
+}
+.pagination a {
+  color: rgba(0, 125, 203, 0.57);
 }
 .pagination .older {
   float:left;
@@ -310,7 +323,7 @@ a img {
 }
 
 
-/* !Footer
+/* Footer
 ----------------------------------------------- */
 #footer p {
   padding:10px 0;

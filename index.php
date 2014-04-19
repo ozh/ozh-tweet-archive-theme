@@ -15,13 +15,15 @@
   </div>
 
 <?php endwhile; ?>
+
+    <div class="pagination">
+        <div class="older"><?php next_posts_link('&laquo; Older tweets') ?></div>
+        <div class="newer"><?php previous_posts_link('Newer tweets &raquo;') ?></div>
+    </div>
+
 </div>
 <!-- END #tweets -->
 
-<div class="pagination">
-	<div class="older"><?php next_posts_link('&laquo; Older tweets') ?></div>
-	<div class="newer"><?php previous_posts_link('Newer tweets &raquo;') ?></div>
-</div>
 
 <?php else : ?>
 
