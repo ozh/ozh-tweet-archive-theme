@@ -1,6 +1,6 @@
 /*
 Theme Name: Tweet Archive
-Theme URI: #
+Theme URI: http://planetozh.com/blog/my-projects/ozh-tweet-archive-theme-for-wordpress/
 Description: Ozh' Tweet Archive
 Version: 2.0
 Author: Ozh
@@ -32,7 +32,7 @@ a img {
   background:none;
 }
 
-/* Structure
+/* Structure, basic, unstyled
 ----------------------------------------------- */
 
 #header {
@@ -59,6 +59,7 @@ a img {
   float:right;
   width:220px;
   margin-top:-140px;
+  margin-right:10px;
 }
   
 #tweets {
@@ -68,16 +69,6 @@ a img {
 
 #footer {
   margin-left: 260px;
-}
-  
-@media all and (max-width: 1100px) and (min-width:1024px){
-  #zsidebar { width: 220px }
-  #zcontent { width: 520px }
-}
-
-@media all and (max-width: 1023px) {
-  #zsidebar { display:none; }
-  #zcontent { width: 580px }
 }
 
 /* Header
@@ -102,6 +93,7 @@ a img {
   background:rgba(239, 242, 214, 0.55);
   height:45px;
   box-shadow:0 0px 2px rgba(0, 0, 0, 0) inset, 0 0px 1px rgba(0, 0, 0, 0.8) inset;
+  overflow:hidden;
 }
 
 #stats-header {
@@ -212,7 +204,7 @@ a img {
     padding-left:3px;
 }
 
-#user-realname {
+.user-realname {
   font-size:24px;
   font-weight:bolder;
   color:#111;
@@ -449,4 +441,28 @@ body.single #tweets .post .meta, body.single #tweets .post .meta a {
 }
 #footer a {
   color:#666;
+}
+
+/* Responsive shit
+----------------------------------------------- */
+
+#tiny-name {display:none;}
+
+@media all and (max-width: 1068px) {
+  #header { background:url("img/1500x500.png") no-repeat -220px center; }
+}
+
+@media all and (max-width: 850px) {
+  #user { display:none;}
+  #tiny-name {display:block; font-size: 20px; padding: 10px 0 0;}
+  #stats-header li {margin-left:0px}
+  #searchform {visibility:hidden;}
+  #tweets, #footer {margin-left:10px;}
+  #stats-header {padding:1px 0 0 10px;}
+}
+
+@media all and (max-width: 600px) {
+  #sidebar { display:none;}
+  #tweets, #footer {margin-right:10px;}
+  #content {width:100%}
 }

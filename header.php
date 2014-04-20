@@ -15,6 +15,7 @@
 
 <div id="stats-wrap">
     <ul id="stats-header">
+        <li id="tiny-name">Ozh <a href="https://twitter.com/ozh">@ozh</a></li>
         <li><span class="what">tweets</span><span class="much"><?php do_action('ozh_ta_total_tweets'); ?></span></li>
         <li><span class="what">following</span><span class="much"><?php do_action('ozh_ta_total_following'); ?> <a href="https://twitter.com/ozh/following"><i class="fa fa-caret-right"></i></a></span></li>
         <li><span class="what">followers</span><span class="much"><?php do_action('ozh_ta_total_followers'); ?> <a href="https://twitter.com/ozh/followers"><i class="fa fa-caret-right"></i></a></span></li>
