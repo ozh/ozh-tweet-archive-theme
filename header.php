@@ -13,6 +13,15 @@
 <a href="<?php bloginfo('url'); ?>"></a>
 </div>
 
+<div id="stats-wrap">
+    <ul id="stats-header">
+        <li><span class="what">tweets</span><span class="much"><?php do_action('ozh_ta_total_tweets'); ?></span></li>
+        <li><span class="what">following</span><span class="much"><?php do_action('ozh_ta_total_following'); ?> <a href="https://twitter.com/ozh/following"><i class="fa fa-caret-right"></i></a></span></li>
+        <li><span class="what">followers</span><span class="much"><?php do_action('ozh_ta_total_followers'); ?> <a href="https://twitter.com/ozh/followers"><i class="fa fa-caret-right"></i></a></span></li>
+        <li><span class="what">listed</span><span class="much"><?php do_action('ozh_ta_total_listed'); ?> <a href="https://twitter.com/ozh/memberships"><i class="fa fa-caret-right"></i></a></span></li>
+    </ul>
+</div>
+
 <!-- !BEGIN #container -->
 <div id="container">
 
@@ -26,12 +35,13 @@
     </div>
     <div id="user-info">
         <ul>
-            <li id="user-realname">Ozh RICHARD</li>
-            <li id="username"><i class="fa fa-twitter"></i>@<a href="https://twitter.com/ozh">ozh</a></li>
-            <li id="username"><i class="fa fa-github-alt"></i>@<a href="https://github.com/ozh">ozh</a></li>
-            <li id="username"><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/ozh.richard">ozh.richard</a></li>
-            <li id="user-loc"><i class="fa fa-map-marker"></i>Nantes, FR</li>
-            <li id="user-url"><i class="fa fa-link"></i><a href="http://ozh.org">ozh.org</a></li>
+            <li class="user-realname">Ozh RICHARD</li>
+            <li class="username"><i class="fa fa-twitter"></i>@<a href="https://twitter.com/ozh">ozh</a></li>
+            <li class="username"><i class="fa fa-github-alt"></i>@<a href="https://github.com/ozh">ozh</a></li>
+            <li class="username"><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/ozh.richard">ozh.richard</a></li>
+            <li class="user-loc"><i class="fa fa-map-marker"></i>Nantes, FR</li>
+            <li class="user-url"><i class="fa fa-link"></i><a href="http://ozh.org">ozh.org</a></li>
+            <li class="user-url"><i class="fa fa-link"></i><a href="http://planetozh.com">planetozh.com</a></li>
         </ul>
     </div>
 </div>

@@ -4,7 +4,7 @@
 
 <!-- !BEGIN #tweets -->
 <div id="tweets">
-<h2>Search results for <?php the_search_query(); ?> <?php if( $paged > 1 ) echo "&laquo; page $paged"; ?></h2>
+<h2>Search results for &laquo;<?php the_search_query(); ?>&raquo; <?php if( $paged > 1 ) echo "&laquo; page $paged"; ?></h2>
 
 <?php while (have_posts()) : the_post(); ?>
   <div <?php post_class() ?> id="post-<?php the_ID(); ?>">

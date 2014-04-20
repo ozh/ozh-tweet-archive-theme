@@ -2,17 +2,20 @@
 
 if ( function_exists('register_sidebar') )
     register_sidebar();
-	
-// highlights the current nav item for monthly archive listings
-function get_archives_link_mod ( $link_html ) {
-  preg_match ("/href='(.+?)'/", $link_html, $url);
-  $requested = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
-  if ($requested == $url[1]) {
-    $link_html = str_replace('<li>', '<li class="current">', $link_html);
-  }
-  return $link_html;
+
+add_action( 'wp_enqueue_scripts', function(){ wp_enqueue_script( 'jquery' ); } );
+
+function otat_get_tweet_style() {
+    $title    = strlen( get_the_title() );
+    $is_reply = ozh_ta_is_reply_or_not( false );
+    if( $title > 100 ) {
+        $style = 'long';
+    } elseif ( $title > 50 ) {
+        $style = 'medium';
+    } else {
+        $style = 'short';
+    }
+    return "$style $is_reply";
 }
-add_filter("get_archives_link", "get_archives_link_mod");
 
 
-?>

@@ -8,8 +8,8 @@
 
 <?php while (have_posts()) : the_post(); ?>
   <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-    <div class="tweet">
-      <?php the_content(); ?>
+    <div class="tweet <?php echo otat_get_tweet_style(); ?>">
+        <?php the_content(); ?>
     </div>
     <p class="meta"><?php do_action( 'ozh_ta_in_reply_to_tweet' ) ?> <?php the_time('g:ia M j Y') ?> <a href="<?php do_action( 'ozh_ta_tweet_link' ); ?>" title="Original on Twitter">#</a> <a href="<?php the_permalink() ?>" title="Permalink" rel="bookmark">&#0182;</a> <?php edit_post_link('edit', '', ''); ?></p>
   </div>
