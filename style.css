@@ -85,7 +85,6 @@ a img {
 
 /* Stat header
 ----------------------------------------------- */
-
 #stats-wrap {
   width:100%;
   border-bottom:1px solid #44A340;
@@ -126,7 +125,6 @@ a img {
     text-align:center;
     font-size:16px;
 }
-
 
 #stats-header li span.much a {
     color: inherit;
@@ -232,6 +230,7 @@ a img {
 }
 #tweets .meta a {
   font-weight:normal;
+  padding: 0 2px;
 }
 #tweets .post .meta, #tweets .post .meta a {
   font-size:12px;
@@ -399,12 +398,82 @@ body.single #tweets .post .meta, body.single #tweets .post .meta a {
   font-weight:normal;
 }
 
-#archives li {
-	background:transparent url("img/li-bg.png") right center no-repeat;
-}
-
 #bleh li a:hover {
     background:none;
+}
+/* Archive
+----------------------------------------------- */
+#archives ol {
+	margin:0;
+	padding:0;
+	list-style:none;
+	overflow:hidden;
+	width:100%;
+}
+#archives ol li {
+    display:inline-block;
+    float:left;
+    width:15px;
+    height:30px;
+    border:1px solid white;
+    margin-left:1px;
+    background:#D6E685;
+}
+#archives ol li.empty {
+    background:rgba(246, 248, 231, 0.5);
+}
+#archives ol li a {
+    display:inline-block;
+    width:100%;
+    height:20px;
+    background:none;
+    padding:0;
+}
+#archives ol li a:hover {
+    border-radius:0;
+    background:inherit;
+}
+#archives span.bar_wrap {
+    width:100%;
+    height:100%;
+    zbackground:#F6F8E8;
+    display:block;
+}
+#archives span.bar {
+    width:100%;
+    background:#F6F8E8;
+    display:block;
+}
+#archives ol li.not_empty:hover {
+   background:#44A340;
+}
+#archives span.label {
+    display:block;
+    width:100%;
+    height:10px;
+    font-size:10px;
+    text-align:center;
+    line-height:2px;
+    color:transparent;
+    padding:2px 0px;
+}
+#archives ol li.not_empty:hover span.label {
+    color:white;
+}
+#archives .archive_year_label {
+    font-size:12px;
+    font-weight:bold;
+    color:#44A340;
+}
+#archives .archive_year:hover .archive_year_label {
+    color:#1E6823;
+}
+#archives .archive_year_count {
+    display:none;
+}
+#archives .archive_year:hover .archive_year_count {
+    display:block;
+    float:right;
 }
 
 /* Misc

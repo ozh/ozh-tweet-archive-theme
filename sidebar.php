@@ -6,11 +6,9 @@
   
     <h2><i class="fa fa-calendar"></i> Archives</h2>
 	<?php /**/ ?>
-    <ul id='archives'>
-      <li<?php if (is_home()) echo ' class="current"'; ?>><a href="<?php bloginfo('url'); ?>/">Home (recent tweets) <span class="count">ALL</span></a></li>
-    <?php $archives = ozh_ta_get_month_archives('show_post_count=1&echo=0');
-          echo $archives; ?>
-	</ul>
+    <div id='archives'>
+    <?php otat_month_archives(); ?>
+	</div>
 	<?php /**/ ?>
 	
 	<h2><i class="fa fa-dashboard"></i> Stats</h2>
