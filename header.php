@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 
 <div id="header">
-<a href="<?php bloginfo('url'); ?>"></a>
+<a href="<?php bloginfo('url'); ?>" title="Back home"></a>
 </div>
 
 <div id="stats-wrap">

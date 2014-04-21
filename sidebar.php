@@ -32,7 +32,7 @@
 	<h2><i class="fa fa-info-circle"></i> Bleh</h2>
 	<ul id="bleh" class="block">
 	<li>Tweets archive every <span class="count"><?php global $ozh_ta; echo ozh_ta_seconds_to_words( $ozh_ta['refresh_interval'] ); ?></span></li>
-	<li>Next update in <span class="count"><?php echo ozh_ta_next_update_in(); ?></span></li>
+	<li>Next update in <span class="count"><?php echo ozh_ta_next_update_in( true, false ); ?></span></li>
 	<li><a href="<?php bloginfo('url'); ?>/wp-admin/">Admin</a></li>
 	<li><?php wp_loginout(); ?></li>
 	</ul>
