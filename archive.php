@@ -22,7 +22,7 @@
     <div class="tweet">
       <?php the_content() ?>
     </div>
-    <p class="meta"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_time('g:ia j M Y') ?></a> <?php edit_post_link('edit', '', ''); ?></p>
+    <?php get_template_part( 'post_meta' ); ?>
   </div>
 
 <?php endwhile; ?>

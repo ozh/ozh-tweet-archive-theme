@@ -11,7 +11,7 @@
     <div class="tweet">
       <?php the_content(); ?>
     </div>
-    <p class="meta">From <?php do_action( 'ozh_ta_source'); ?> <?php do_action( 'ozh_ta_in_reply_to_tweet') ?> <?php the_time('g:ia M j Y') ?> <a href="<?php do_action( 'ozh_ta_tweet_link'); ?>" title="Original on Twitter">#</a> <?php edit_post_link('edit', '', ''); ?></p>
+    <?php get_template_part( 'post_meta' ); ?>
   </div>
 
 <?php endwhile; ?>
