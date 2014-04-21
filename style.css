@@ -404,7 +404,7 @@ body.single #tweets .post .meta, body.single #tweets .post .meta a {
 /* Archive
 ----------------------------------------------- */
 #archives ol {
-	margin:0;
+	margin:-6px 0 5px;
 	padding:0;
 	list-style:none;
 	overflow:hidden;
@@ -463,17 +463,19 @@ body.single #tweets .post .meta, body.single #tweets .post .meta a {
 #archives .archive_year_label {
     font-size:12px;
     font-weight:bold;
-    color:#44A340;
+    color:#1E6823;
+    padding-left:2px;
 }
 #archives .archive_year:hover .archive_year_label {
-    color:#1E6823;
+    color:#333;
 }
 #archives .archive_year_count {
     display:none;
 }
 #archives .archive_year:hover .archive_year_count {
-    display:block;
-    float:right;
+    display:inline;
+    margin-left:30px;
+    color:#8CC665;
 }
 
 /* Misc
