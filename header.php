@@ -32,7 +32,7 @@
 <!-- !BEGIN #user -->
 <div id="user">
     <div id="user-pic">
-        <a href="https://twitter.com/ozh"  class="avatar"><zimg src="<?php bloginfo('template_url'); ?>/img/new-profile.jpg" alt="Ozh" /></a>
+        <a href="https://twitter.com/ozh" class="avatar"></a>
     </div>
     <div id="user-info">
         <ul>
@@ -47,3 +47,9 @@
     </div>
 </div>
 <!-- END #user -->
+
+<?php
+// If you set up static pages for posts and front page, display links. See the comment in file stream_toggle.php
+if( get_option( 'page_for_posts' ) )
+    get_template_part( 'stream_toggle' );
+?>

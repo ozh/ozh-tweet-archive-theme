@@ -243,6 +243,21 @@ a img {
   color:#666;
 }
 
+#stream_toggle {
+  border-bottom:1px solid #D6E685;
+  margin-left:260px;
+}
+#stream_toggle ul {
+  margin:0;
+  padding:10px 0 0 0;
+  list-style:none;
+  height:30px;
+}
+#stream_toggle ul li {
+  float:left;
+  padding-right:10px;
+}
+
 /* Tweet custom styles depending on content
 ----------------------------------------------- */
 .tweet.short.is_no_reply > p {
@@ -284,7 +299,6 @@ body.single #tweets .post .meta, body.single #tweets .post .meta a {
 #tweets .link_untco_image {
     display:none;
 }
-
 
 /* Searchform
 ----------------------------------------------- */
